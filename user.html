@@ -7,18 +7,22 @@
        
         <div class="container" id="container">
             <div class="form-container sign-up-container">
-                <form action="#">
+                <form action="/submit.php" onsubmit="return validation()" name="RegForm">
                     <h1>UserSignUp</h1>
-            
-                         <input type="text" placeholder="Name of owner" />
-                         <input type="text" placeholder="Car Model" />
-                         <input type="text" placeholder="Car details" />
-                         <input type="text" placeholder="car-Number" />
-                         <input type="text" placeholder="Phone-No" />
-                         <input type="email" placeholder="Email" />
-                         <input type="password" placeholder="Password" />
-
-                         <button>Sign up</button>
+                         <input type="email" name="email" placeholder="Email" />
+                         <input type="password"  name="password" placeholder="Password" />
+                         <input type="password" name="password2" placeholder="re-enter Password" />
+                         <input type="text" name="name" placeholder="Name of owner" />
+                         <input type="text" name="model" placeholder="Car Model" />
+                         <input type="text" name="details" placeholder="Car details" />
+                         <input type="text"  name="car-Number"placeholder="car-Number" />
+                         <input type="text"  name="Phone-No"placeholder="Phone-No" />
+                         <div>
+                            Alternate Phone-No: <input type="text" name="Phone-No2" placeholder="Number-1"/>
+                                                <input type="text"  name="Phone-No3"placeholder="Number-2"/>
+                                               
+                         </div>
+                         <button>Submit</button>
 
                                          
                 </form>
@@ -26,14 +30,9 @@
         <div class=" form-container sign-in-container">
             <form action="#">
                 <h1>Sign in</h1>
-                <div class="social-container">
-                        <a href="#" class="social"><i class="facebook"></i></a>
-                        <a href="#" class="social"><i class="gmail"></i></a>
-                        <a href="#" class="social"><i class="linkedin"></i></a>
-                       </div>  
-                        
+              
                         <span>or use your Account</span>
-                        <input type="text" placeholder="Name" />
+                      
                         <input type="email" placeholder="Email" />
                         <input type="password" placeholder="Password" />
 
@@ -74,4 +73,60 @@
             container.classList.remove("right-panel-active");
         } );
     </script>
+
+<script> 
+    function validation()                                    
+    { 
+        var name = document.forms["RegForm"]["name"];               
+        var email = document.forms["RegForm"]["eMail"];    
+        var phone = document.forms["RegForm"]["Phone-No"];  
+        var phone2 =  document.forms["RegForm"]["Phone-no2"];
+        var phone3 =  document.forms["RegForm"]["Phone-no3"];  
+        var password = document.forms["RegForm"]["password"];  
+        var password2 = document.forms["RegForm"]["password2"];  
+        var model = document.forms["RegForm"]["model"];  
+       
+        if (name.value == "")                                  
+        { 
+            window.alert("Please enter your name."); 
+            name.focus(); 
+            return false; 
+        } 
+       
+        if (address.value == "")                               
+        { 
+            window.alert("Please enter your address."); 
+            address.focus(); 
+            return false; 
+        } 
+           
+        if (email.value == "")                                   
+        { 
+            window.alert("Please enter a valid e-mail address."); 
+            email.focus(); 
+            return false; 
+        } 
+       
+        if (phone.value == "")                           
+        { 
+            window.alert("Please enter your telephone number."); 
+            phone.focus(); 
+            return false; 
+        } 
+       
+        if (password.value == "")                        
+        { 
+            window.alert("Please enter your password"); 
+            password.focus(); 
+            return false; 
+        } 
+
+        return true; 
+    }</script> 
+      
+     <section>
+        <footer class="bg-dark text-white text-center">
+         <p>@copyright  2020</p>
+        </footer>
+      </section>
 </html>

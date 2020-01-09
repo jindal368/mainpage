@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>day 1</title>
+        <link rel="stylesheet" type="text/css" href="day1.css" />
+    </head>
+    <body>
+       
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>UserSignUp</h1>
+                         <input type="email" placeholder="Email" />
+                         <input type="password" placeholder="Password" />
+                         <input type="password" placeholder="re-enter Password" />
+                         <button>Sign up</button>                  
+                </form>
+            </div>
+        <div class=" form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+              
+                        <span>or use your Account</span>
+                      
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+
+                        <a href="#">Forget your password</a>
+                        <button>Sign in</button>
+
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>hey! please login with your information to connect</p>
+                    <button class="ghost" id="signin">Sign in</button>
+                </div>
+                <div class = "overlay-panel overlay-right">
+                <h1>Hello !</h1>
+                <p>Enter the personel details</p>
+                <button class = "ghost" id="signup">Sign up</button>
+                
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </body>
+
+    <script>
+        const signup = document.getElementById("signup");
+        const signin = document.getElementById("signin");
+        const container = document.getElementById("container");
+
+        signup.addEventListener('click',() => {
+            container.classList.add("right-panel-active");
+
+        });
+        signin.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        } );
+    </script>
+</html>

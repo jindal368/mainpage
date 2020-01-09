@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
 
 * {
 	box-sizing: border-box;
@@ -98,7 +98,7 @@ input {
 	overflow: hidden;
 	width: 1350px;
 	max-width: 100%;
-	min-height:800px;
+	min-height:700px;
 }
 
 .form-container {
