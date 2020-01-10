@@ -15,11 +15,11 @@
                          <input type="text" name="name" placeholder="Name of owner" />
                          <input type="text" name="model" placeholder="Car Model" />
                          <input type="text" name="details" placeholder="Car details" />
-                         <input type="text"  name="car-Number"placeholder="car-Number" />
-                         <input type="text"  name="Phone-No"placeholder="Phone-No" />
+                         <input type="text"  name="car-number"placeholder="car-Number" />
+                         <input type="text"  name="phone-no"placeholder="Phone-No" />
                          <div>
-                            Alternate Phone-No: <input type="text" name="Phone-No2" placeholder="Number-1"/>
-                                                <input type="text"  name="Phone-No3"placeholder="Number-2"/>
+                            Alternate Phone-No: <input type="text" name="phone-no2" placeholder="Number-1"/>
+                                                <input type="text"  name="phone-no3"placeholder="Number-2"/>
                                                
                          </div>
                          <button>Submit</button>
@@ -28,13 +28,13 @@
                 </form>
             </div>
         <div class=" form-container sign-in-container">
-            <form action="#">
+            <form action="/submit.php" onsubmit="return validationp()" name="RegFormp">
                 <h1>Sign in</h1>
               
                         <span>or use your Account</span>
                       
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
+                        <input type="email" placeholder="Email" name="email"/>
+                        <input type="password" placeholder="Password" name="password"/>
 
                         <a href="#">Forget your password</a>
                         <button>Sign in</button>
@@ -78,13 +78,16 @@
     function validation()                                    
     { 
         var name = document.forms["RegForm"]["name"];               
-        var email = document.forms["RegForm"]["eMail"];    
-        var phone = document.forms["RegForm"]["Phone-No"];  
-        var phone2 =  document.forms["RegForm"]["Phone-no2"];
-        var phone3 =  document.forms["RegForm"]["Phone-no3"];  
+        var email = document.forms["RegForm"]["email"];    
+        var phone = document.forms["RegForm"]["phone-no"];  
+        var phone2 =  document.forms["RegForm"]["phone-no2"];
+        var phone3 =  document.forms["RegForm"]["phone-no3"];  
         var password = document.forms["RegForm"]["password"];  
         var password2 = document.forms["RegForm"]["password2"];  
         var model = document.forms["RegForm"]["model"];  
+        var details = document.forms["RegForm"]["details"];  
+        var carnumber = document.forms["RegForm"]["car-number"];  
+        
        
         if (name.value == "")                                  
         { 
@@ -93,10 +96,10 @@
             return false; 
         } 
        
-        if (address.value == "")                               
+        if (model.value == "")                               
         { 
             window.alert("Please enter your address."); 
-            address.focus(); 
+            model.focus(); 
             return false; 
         } 
            
@@ -107,9 +110,15 @@
             return false; 
         } 
        
-        if (phone.value == "")                           
+        if (phone.value == ""||phone.length!=10)                           
         { 
-            window.alert("Please enter your telephone number."); 
+            window.alert("Please enter your number."); 
+            phone.focus(); 
+            return false; 
+        } 
+        if (phone.length!=10)                           
+        { 
+            window.alert("phone-No should be of 10 digits"); 
             phone.focus(); 
             return false; 
         } 
@@ -120,8 +129,57 @@
             password.focus(); 
             return false; 
         } 
+        if (password2.value == "")                        
+        { 
+            window.alert(" Your password should be matched"); 
+            password2.focus(); 
+            return false; 
+        } 
+        if (details.value == "")                        
+        { 
+            window.alert("Please enter your details"); 
+            details.focus(); 
+            return false; 
+        } 
+        if (carnumber.value == ""&&323)                        
+        { 
+            window.alert("Please enter your car-number"); 
+            carnumber.focus(); 
+            return false; 
+        } 
+        if (phone2.value == ""||phone2.length!=10)                        
+        { 
+            window.alert("Please enter your Alternate phone-no"); 
+            phone2.focus(); 
+            return false; 
+        } 
 
-        return true; 
+        if (phone2.length!=10)                        
+        { 
+            window.alert("phone-no should be of 10 digits"); 
+            phone3.focus(); 
+            return false; 
+        } 
+        if (phone3.value == ""||phone3.length!=10)                        
+        { 
+            window.alert("Please enter your Alternate no 3"); 
+            phone3.focus(); 
+            return false; 
+        } 
+        if (phone3.length!=10)                        
+        { 
+            window.alert("Number should be of 10 digits"); 
+            phone3.focus(); 
+            return false; 
+        } 
+        if (password2.value != password.value)                        
+        { 
+            window.alert("Password mismatched!!re-type again"); 
+            password2.focus(); 
+            return false; 
+        } 
+        return true;
+         
     }</script> 
       
      <section>
