@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>day 1</title>
+        <link rel="stylesheet" type="text/css" href="day1.css" />
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>jquery</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='bootstrap.min.css'>
+        <script src='jquerycdn.js'></script>
+        <script src='jquery.min.js'></script>
+        <script src='popper.min.js'></script>
+        <script src='bootstrap.min.js'></script>
+    </head>
+    <body class="bg-ready">
+
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="/submit.php" onsubmit="return validationup()" name="signupform">
+                    <h1>UserSignUp</h1>
+                         <input type="email" name="email1"placeholder="Email" />
+                         <input type="password"name="password1" placeholder="Password" />
+                         <input type="password" name="repassword2"placeholder="re-enter Password" />
+                         <button>Sign up</button>                  
+                </form>
+            </div>
+        <div class=" form-container sign-in-container">
+            <form action="/submit.php" onsubmit="return validation()" name="RegForm">
+                <h1>Sign in</h1>
+              
+                        <span>or use your Account</span>
+                      
+                        <input type="email" name="email" placeholder="Email" />
+                        <input type="password"name="password" placeholder="Password" />
+                        <input type="checkbox"> Remember me
+                        <a href="#">Forget your password</a>
+                        <button>Sign in</button>
+
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>hey! please login with your information to connect</p>
+                    <button class="ghost" id="signin">Sign in</button>
+                </div>
+                <div class = "overlay-panel overlay-right">
+                <h1>Hello !</h1>
+                <hr width="125">
+                <button class = "ghost" id="signup">Sign up</button>
+                
+                </div>
+            </div>
+        </div>
+        <script>
+         function validation(){
+            var email = document.forms["RegForm"]["email"];    
+            var password = document.forms["RegForm"]["password"];    
+            
+            if(email.value=="")
+            {
+                window.alert("enter valid Email");
+                email.focus();
+                return false;
+            }
+            if(password.value=="")
+            {
+                window.alert("enter valid password");
+                password.focus();
+                return false;
+            }
+            return true;
+         }        
+        
+        </script>
+        <script>
+        function validationup(){
+            var email=document.forms["signupform"]["email1"];
+            var password=document.forms["signupform"]["password1"];
+            var password2=document.forms["signupform"]["repassword2"];
+             
+            if(email.value=="")
+            {
+               alert("Enter Email");
+                email.focus();
+                return false;
+            }
+            if(password.value=="")
+            {
+               alert("Enter Password");
+                password.focus();
+                return false;
+            }
+            if(password2.value=="")
+            {
+                window.alert("Re-enter password");
+                password2.focus();
+                return false;
+            }
+           
+            if(password.value!=password2.value)
+            {
+                window.alert("Password Mismatched!!Retype again");
+                password2.focus;
+                return false;
+            }
+
+              return true;
+
+        }
+        
+        
+        </script>
+
+        </div>
+    </body>
+
+    <script>
+        const signup = document.getElementById("signup");
+        const signin = document.getElementById("signin");
+        const container = document.getElementById("container");
+
+        signup.addEventListener('click',() => {
+            container.classList.add("right-panel-active");
+
+        });
+        signin.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        } );
+    </script>
+</html>

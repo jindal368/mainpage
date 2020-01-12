@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>jquery</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='bootstrap.min.css'>
+    <script src='jquerycdn.js'></script>
+    <script src='jquery.min.js'></script>
+    <script src='popper.min.js'></script>
+    <script src='bootstrap.min.js'></script>
+    <style>
+    .carousel-inner img{
+      width:1000px;
+      height:695px;
+      width:100%;
+    }
+   
+
+
+    </style>
+    
+</head>
+<body class="bg-ready">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark ">
+        <a class="navbar-brand" href="main.html">Welcome to Sankatmochan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+           
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Register
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="partner.html">Partner Register</a>
+                <a class="dropdown-item" href="user.html">User Register</a>
+                <div class="dropdown-divider"></div>
+              </div>
+            </li>
+        
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        
+        </div>
+      </nav>
+      <hr class="w-100">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+          <li data-target="#demo" data-slide-to="4"></li>
+          <li data-target="#demo" data-slide-to="5"></li>
+          <li data-target="#demo" data-slide-to="6"></li>
+        </ul>
+        <div class="carousel-inner">
+         
+          <div class="carousel-item active">
+            <img src="images/images4.jpg"  height="100px" class="img-fluid">
+             
+          </div>
+          <div class="carousel-item">
+            <img src="images/images5.jpg"  height="100px" class="img-fluid">
+              
+          </div>
+          <div class="carousel-item">
+            <img src="images/images6.jpg" height="100px" class="img-fluid">
+            
+          </div>
+          <div class="carousel-item">
+            <img src="images/images7.jpg"  height="100px" class="img-fluid">
+              
+          </div>
+          <div class="carousel-item">
+            <img src="images/images8.jpg"  height="100px" class="img-fluid">
+           
+          </div>
+      
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+  </header>
+  <hr class="w-25">
+
+  <div class="container">
+    <br />
+    <br />
+    <br />
+        <h1><strong>FAQ'S</strong></h1>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        This section contains a wealth of information. If you cannot find an answer to your question, 
+        make sure to <strong>leave your query.</strong>  
+    </div>
+
+    <br />
+    
+<section class="bg-primary mb-4 ">
+    <article class="py-4 ">
+      <div class="text-white text-center">
+        <h3 class="display-4 ">Write Your Query here.</h3>
+          <p>Our Customer executive service will respond Asap.</p>
+        <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">Click here</button>
+      </div>
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title bg-alert">Query Section</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="text">Name</label>
+                    <input type="text" class="form-control"placeholder="Enter Name">
+                    </div>
+             <div class="form-group">
+             <label for="email">Email address</label>
+             <input type="email" class="form-control"placeholder="Enter email">
+             </div>
+            
+              <div class="form-group">
+                <label for="comment">Your Query</label>
+                <textarea class="form-control" rows="5" id="comment"placeholder="Type your query here.."></textarea>
+              </div>
+               
+                  <div class="form-group ">
+                    <button class=" btn btn-warning">Post</button>
+                     </div>
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Exit</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    
+    </article>
+  </section>   
+
+
+    <div class="" id="accordion">
+        <div class="faqHeader">General questions- </div>
+        <div class="faqHeader">For Users</div>
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-header">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Is account registration required?</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="card-block">
+                    Account registration at <strong>Sankatmochan</strong> is required if you want youself be safe. 
+                    This ensures a valid communication channel for all Users involved in an accident. 
+                </div>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-header">
+                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Can I submit details of my two product with same identity?</a>
+                </h4>
+            </div>
+            <div id="collapseTen" class="panel-collapse collapse">
+                <div class="card-block">
+                   Answer here..........
+                </div>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-header">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">Is this service  free of cost?</a>
+                </h4>
+            </div>
+            <div id="collapseEleven" class="panel-collapse collapse">
+                <div class="card-block">
+                   //answer here.........
+                </div>
+            </div>
+        </div>
+
+        <div class="faqHeader">Partners</div>
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-header">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">  Any registed partner who presents a work, which is genuine and appealing, can post it efforts on <strong>Sankatmochan</strong>?</a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="card-block">
+                  //answer here.........
+                </div>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-header">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Can you just explain the work of Partner?</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="card-block">
+                   //answer here..........
+                </div>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-header">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">How much do I get from each save?</a>
+                </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse">
+                <div class="card-block">
+                    Here, at <strong>Sankatmochan</strong>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-header">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Why should we use this Service?</a>
+                </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse">
+                <div class="card-block">
+                    There are a number of reasons why you should join us:
+                    
+                </div>
+            </div>
+        </div>
+        
+
+<style>
+    .faqHeader {
+        font-size: 27px;
+        margin: 20px;
+    }
+
+    .panel-heading [data-toggle="collapse"]:after {
+        font-family: 'Glyphicons Halflings';
+        content: "e072"; 
+        float: right;
+        color: #F58723;
+        font-size: 18px;
+        line-height: 22px;
+       
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+    .panel-heading [data-toggle="collapse"].collapsed:after {
+       
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        color:burlywood;
+    }
+</style>
+
+  <section>
+    <footer class="bg-dark text-white text-center">
+     <p>@copyright  2020</p>
+    </footer>
+  </section>
+ 
+ 
+ 
+</body>
